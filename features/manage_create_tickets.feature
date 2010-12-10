@@ -5,7 +5,7 @@ Feature: Create Ticket
   
   Scenario: Register new create_ticket
     Given I am on the new ticket page
-    When I fill in "subject" with "something..."
+    When I fill in "Subject" with "something..."
     And I press "Create"
     Then I should be on the ticket page for "something..."
     And I should see "ticket is created"

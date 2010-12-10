@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   def new
+    @ticket = Ticket.new
   end
 
   def show
@@ -9,6 +10,8 @@ class TicketsController < ApplicationController
   end
 
   def create
+    @ticket = Ticket.new(params[:ticket])
+    @ticket.save
   end
 
   def edit
