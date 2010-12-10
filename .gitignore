@@ -1,6 +1,4 @@
-.DS_Store
+.bundle
+db/*.sqlite3
 log/*.log
 tmp/**/*
-config/database.yml   
-config/initializers/site_keys.rb   
-db/*.sqlite3
