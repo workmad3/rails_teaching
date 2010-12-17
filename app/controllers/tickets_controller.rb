@@ -3,7 +3,8 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new
   end
 
-  def show
+  def show 
+    @ticket=Ticket.find(params[:id])
   end
 
   def index
@@ -12,6 +13,7 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new(params[:ticket])
     @ticket.save
+    redirect_to @ticket, :notice => "ticket is created"
   end
 
   def edit

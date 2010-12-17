@@ -12,7 +12,8 @@ module NavigationHelpers
       '/'
     when /the new ticket page/
       new_ticket_path
-
+    when /the ticket page for "(.*)"/
+      ticket_path(Ticket.find_by_subject($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
